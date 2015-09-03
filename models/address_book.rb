@@ -8,6 +8,11 @@ class AddressBook
         @entries = []
     end
 
+    def detonate
+        @entries = []
+    end
+
+
     def remove_entry(name, phone, email)
         delete_entry = nil
 
@@ -42,6 +47,7 @@ class AddressBook
             add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
         end
     end
+
 
     def iterative_search(name)
         @entries.each do |entry|
